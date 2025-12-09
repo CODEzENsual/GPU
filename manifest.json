@@ -1,0 +1,48 @@
+{
+  "name": "V3D Interactivo - Visor 3D WebGPU",
+  "short_name": "V3D",
+  "description": "Visor 3D interactivo con soporte WebGPU, WebGL y Realidad Aumentada",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0a0a0f",
+  "theme_color": "#7B61FF",
+  "categories": ["graphics", "utilities", "entertainment"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "./index.html",
+      "accept": {
+        "model/gltf-binary": [".glb"],
+        "model/gltf+json": [".gltf"]
+      }
+    }
+  ],
+  "share_target": {
+    "action": "./index.html",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "files": [
+        {
+          "name": "model",
+          "accept": [".glb", ".gltf"]
+        }
+      ]
+    }
+  }
+}

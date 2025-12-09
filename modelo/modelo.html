@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  <title>Vista 3D</title>
+  <link rel="stylesheet" href="css/modelo-variables.css">
+  <link rel="stylesheet" href="css/modelo-base.css">
+  <link rel="stylesheet" href="css/modelo-components.css">
+  <link rel="stylesheet" href="css/modelo-responsive.css">
+  <script type="module" src="https://esm.sh/@google/model-viewer@4.1.1?bundle"></script>
+</head>
+<body>
+  <div id="loader" role="status" aria-live="polite">
+    <div class="spinner-container">
+      <div class="spinner"></div>
+      <div class="spinner-glow"></div>
+    </div>
+    <div id="loaderText" class="loader-text">Cargando modelo...</div>
+    <div class="progress-track">
+      <div id="progressBar" class="progress-bar"></div>
+    </div>
+    <button id="retryBtn" class="retry-btn" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+      </svg>
+      Reintentar carga
+    </button>
+  </div>
+<!--///IN-->
+  <model-viewer id="viewer"
+                src="assets/steam_machine.glb"
+                alt="Vista 3D"
+                camera-controls
+                auto-rotate
+                rotation-per-second="0.5"
+                exposure="1.2"
+                shadow-intensity="1.2"
+                shadow-softness="0.8"
+                interaction-prompt="auto"
+                reveal="auto"
+                environment-image="neutral"
+                ar
+                ar-modes="webxr scene-viewer quick-look"
+                crossorigin="anonymous"
+                loading="eager">
+  </model-viewer>
+///OUT<!--
+  <model-viewer id="viewer"
+                src="../assets/steam_machine.glb"
+                alt="Vista 3D"
+                camera-controls
+                auto-rotate
+                rotation-per-second="0.5"
+                exposure="1.2"
+                shadow-intensity="1.2"
+                shadow-softness="0.8"
+                interaction-prompt="auto"
+                reveal="auto"
+                environment-image="neutral"
+                ar
+                ar-modes="webxr scene-viewer quick-look"
+                crossorigin="anonymous"
+                loading="eager">
+  </model-viewer>
+-->
+  <div class="menu" id="menu">
+    <button id="rotateToggle" class="menu-btn" aria-pressed="true" title="Alternar rotación">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+      </svg>
+      <span>Detener rotación</span>
+    </button>
+    <button id="resetCam" class="menu-btn" title="Reiniciar cámara">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+        <path d="M3 3v5h5"/>
+      </svg>
+      <span>Reiniciar cámara</span>
+    </button>
+    <button id="fullscreenToggle" class="menu-btn" title="Pantalla completa">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+      </svg>
+      <span>Pantalla completa</span>
+    </button>
+  </div>
+
+  <script type="module" src="js/modelo-config.js"></script>
+  <script type="module" src="js/modelo-viewer.js"></script>
+  <script type="module" src="js/modelo-controls.js"></script>
+  <script type="module" src="js/modelo-main.js"></script>
+  <script type="module" src="js/models.js"></script>
+</body>
+</html>

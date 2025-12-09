@@ -1,0 +1,46 @@
+:root {
+  --color-bg: #0a0e27;
+  --color-surface: #141a3e;
+  --color-surface-elevated: #1a2247;
+  
+  --color-accent-primary: #00d9ff;
+  --color-accent-secondary: #7b61ff;
+  --color-accent-tertiary: #ff61e6;
+  
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b8c5db;
+  --color-text-muted: #7a8aa8;
+  
+  --color-error: #ff6b6b;
+  --color-success: #51cf66;
+  
+  --gradient-primary: linear-gradient(135deg, #00d9ff 0%, #7b61ff 50%, #ff61e6 100%);
+  --gradient-overlay: linear-gradient(180deg, rgba(10, 14, 39, 0.85) 0%, rgba(10, 14, 39, 0.92) 100%);
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.18);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.24);
+  --shadow-glow: 0 0 40px rgba(123, 97, 255, 0.2);
+  
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  --z-loader: 50;
+  --z-menu: 40;
+}
